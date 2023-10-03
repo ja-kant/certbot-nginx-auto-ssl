@@ -12,7 +12,7 @@ while (( $# >= 1 )); do.
     shift
 done
 
-if [ "$silent" = false ] ; then.
+if [ "$silent" = false ] ; then
     read -p "Обновление SSL-сертификатов Let's Encrypt на основании конфигурации nginx. Продолжить? (Y/N):"  confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1;
 fi
 nginx -T | grep "server_name " > ./s1.list
