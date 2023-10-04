@@ -4,7 +4,7 @@ set -e
 
 silent=false
 
-while (( $# >= 1 )); do.
+while (( $# >= 1 )); do
     case $1 in
     --silent) silent=true;;
     *) break;
